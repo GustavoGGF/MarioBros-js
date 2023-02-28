@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(27, 117, 190, 0.685), white);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.tree {
+    position: absolute;
+    bottom: -10;
+    width: 100%;
+}
+
+button {
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, red, rgb(226, 241, 13), rgba(216, 80, 18, 0.856));
+    animation: gradient 10s ease infinite;
+    background-size: 300% 300%;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    position: absolute;
+}
+
+.mario {
+    width: 130px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.cloud {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.jump {
+    animation: mario-jump 850ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: 0px;
+    }
+
+    45% {
+        bottom: 160px;
+    }
+
+    50% {
+        bottom: 160px;
+    }
+
+    55% {
+        bottom: 160px;
+    }
+
+    60% {
+        bottom: 160px;
+    }
+
+    65% {
+        bottom: 120px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
